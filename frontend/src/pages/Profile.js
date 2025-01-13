@@ -12,7 +12,7 @@ const Profile = () => {
       if (!token) return navigate("/login");
 
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get("https://captn-assignment.onrender.com/api/auth/profile", {
           headers: { Authorization: token },
         });
         setUser(res.data.user);
@@ -29,7 +29,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
   
       // Make API call to the backend to logout
-      const response = await fetch("http://localhost:5000/api/auth/logout", {
+      const response = await fetch("https://captn-assignment.onrender.com/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
