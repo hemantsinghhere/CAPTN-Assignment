@@ -14,7 +14,7 @@ const Resources = () => {
 
   const fetchResources = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/resources", {
+      const response = await fetch("https://captn-assignment.onrender.com/api/resources", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -48,7 +48,7 @@ const Resources = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/resources", {
+      const response = await fetch("https://captn-assignment.onrender.com/api/resources", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -75,7 +75,7 @@ const Resources = () => {
   const deleteResource = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/resources/${id}`,
+        `https://captn-assignment.onrender.com/api/resources/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -115,7 +115,7 @@ const Resources = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/resources/${currentResourceId}`,
+        `https://captn-assignment.onrender.com/api/resources/${currentResourceId}`,
         {
           method: "PUT",
           headers: {
@@ -153,7 +153,7 @@ const Resources = () => {
       const token = localStorage.getItem("token");
   
       // Make API call to the backend to logout
-      const response = await fetch("http://localhost:5000/api/auth/logout", {
+      const response = await fetch("https://captn-assignment.onrender.com/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
